@@ -26,17 +26,20 @@ lista_n = []
 avaliação()
 print('*'*45)
 
-sair = ''
-while sair != 'n':
-    lista_not = lista_not[:]    
-    e = float(input('Pesquisa de nota da ENTREVISTA: '))
-    t = float(input('Pesquisa de nota do TESTE TEÓRICO: '))
-    p = float(input('Pesquisa de nota do TESTE PRÁTICO: '))
-    s = float(input('Pesquisa de nota da AVALIÇÃO SOFT SKILLS: '))
-    procura = f'e{e}_t{t}_p{p}_s{s}'
-    for i,cand in enumerate(lista_not):
-        if cand == procura:
-            print(f'O canditato aprovado seguindo os parâmetros estabelecidos foi : {lista_n[i]}')      
-    print('Continuar? [S]im ou [N]ão? ')
-    sair = input().lower()
-print('*'*45)
+def pesquisa():
+    sair = ''
+    while sair != 'n':          
+        e = float(input('Pesquisa de nota da ENTREVISTA: '))
+        t = float(input('Pesquisa de nota do TESTE TEÓRICO: '))
+        p = float(input('Pesquisa de nota do TESTE PRÁTICO: '))
+        s = float(input('Pesquisa de nota da AVALIÇÃO SOFT SKILLS: '))
+        procura = f'e{e}_t{t}_p{p}_s{s}'
+        for i,cand in enumerate(lista_not):
+            if cand == procura:
+                print(f'O canditato aprovado seguindo os parâmetros estabelecidos foi : {lista_n[i]}')      
+        print('Continuar? [S]im ou [N]ão? ')
+        sair = input().lower()
+    print('*'*45)
+
+
+pesquisa()
