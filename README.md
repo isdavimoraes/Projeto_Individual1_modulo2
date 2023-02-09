@@ -14,4 +14,5 @@ teste prático e apresentaram um ótimo nível de soft skills!
 
 *************************************************************************
 
-Como foi realizado: Fiz 2 lista para armazenar os nomes e as notas e depois utilizei uma função para realizar uma busca.
+Como foi realizado: Fiz 2 lista para armazenar os nomes e as notas em uma função DEF.
+Depois utilizei uma função def para realizar uma busca nessas lista.
