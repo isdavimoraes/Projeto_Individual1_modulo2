@@ -4,15 +4,8 @@ Criar com Python uma lista para armazenar esses resultados
 precisa funcionar para qualquer lista que seja inserida nesse
 formato) e depois uma função que busca o candidato de
 acordo com os critérios digitados pelo usuário.
-
-
-
-
 candidato = input('Nome do candidato: ')
-e = float(input('Nota do candidato referente a ENTREVISTA: '))
-t = float(input('Nota do candidato referente a TESTE TEÓRICO: '))
-p = float(input('Nota do candidato referente a TESTE PRÁTICO: '))
-s = float(input('Nota do candidato referente a AVALIÇÃO SOFT SKILLS: '))
+
 '''
 
 def avaliação():
@@ -23,19 +16,17 @@ def avaliação():
         t = float(input('Nota do candidato referente a TESTE TEÓRICO: '))
         p = float(input('Nota do candidato referente a TESTE PRÁTICO: '))
         s = float(input('Nota do candidato referente a AVALIÇÃO SOFT SKILLS: '))
-        lista_not.append(f'e{e}_t{t}_p{p}_s{s}')        
+        lista_not.append(f'e{e}_t{t}_p{p}_s{s}')
+        print(f'Candidato {lista_n} adicionado na lsita com nota: {lista_not}')        
         print('Continuar? [S]im ou [N]ão? ')
         sair = input().lower()
 
 lista_not = []
 lista_n = []
 avaliação()
-print(lista_n)
-print(lista_not)
-
+print('*'*45)
 
 sair = ''
-lista_procura = []
 while sair != 'n':
     lista_not = lista_not[:]    
     e = float(input('Pesquisa de nota da ENTREVISTA: '))
@@ -45,7 +36,7 @@ while sair != 'n':
     procura = f'e{e}_t{t}_p{p}_s{s}'
     for i,cand in enumerate(lista_not):
         if cand == procura:
-            print(f'O canditato aprovado seguindo os parâmetros estabelecidos foi :{lista_n[i]}')      
+            print(f'O canditato aprovado seguindo os parâmetros estabelecidos foi : {lista_n[i]}')      
     print('Continuar? [S]im ou [N]ão? ')
     sair = input().lower()
-
+print('*'*45)
